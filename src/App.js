@@ -19,7 +19,7 @@ class App extends Component {
         }
     }
 
-    ToggleNavBar() {
+    toggleNavBar() {
         this.setState({NavBar: !this.state.NavBar})
     }
 
@@ -33,7 +33,6 @@ class App extends Component {
         this.setState({viewChild: false})
     }
 
-
     render() {
         if (this.state.viewChild === true) {
             return (
@@ -42,12 +41,12 @@ class App extends Component {
                         <AppBar
                             title="Gfriend Fan Site"
                             iconClassNameRight="muidocs-icon-navigation-expand-more"
-                            onLeftIconButtonTouchTap={this.ToggleNavBar.bind(this)}/>
+                            onLeftIconButtonTouchTap={this.toggleNavBar.bind(this)}/>
                         <Drawer
                             docked={false}
                             width={225}
                             open={this.state.NavBar}
-                            onRequestChange={this.ToggleNavBar.bind(this)}>
+                            onRequestChange={this.toggleNavBar.bind(this)}>
                             <Link to="/">
                                 <MenuItem primaryText="Home"
                                           leftIcon={<Home/>}
@@ -73,12 +72,12 @@ class App extends Component {
                         <AppBar
                             title="Gfriend Fan Site"
                             iconClassNameRight="muidocs-icon-navigation-expand-more"
-                            onLeftIconButtonTouchTap={this.ToggleNavBar.bind(this)}/>
+                            onLeftIconButtonTouchTap={this.toggleNavBar.bind(this)}/>
                         <Drawer
                             docked={false}
                             width={225}
                             open={this.state.NavBar}
-                            onRequestChange={this.ToggleNavBar.bind(this)}>
+                            onRequestChange={this.toggleNavBar.bind(this)}>
                             <Link to="/">
                                 <MenuItem primaryText="Home"
                                           leftIcon={<Home/>}
